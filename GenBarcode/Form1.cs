@@ -43,6 +43,19 @@ namespace GenBarcode
                     Format = (BarcodeFormat)cboFormat.SelectedValue //  BarcodeFormat.CODE_128
                 };
 
+                // 填入Options，當有設定的話。
+                if (!String.IsNullOrWhiteSpace(txtWidth.Text))
+                    writter.Options.Width = int.Parse(txtWidth.Text.Trim());
+
+                if (!String.IsNullOrWhiteSpace(txtHeight.Text))
+                    writter.Options.Height = int.Parse(txtHeight.Text.Trim());
+
+                if (!String.IsNullOrWhiteSpace(txtMargin.Text))
+                    writter.Options.Margin = int.Parse(txtMargin.Text.Trim());
+
+                writter.Options.PureBarcode = chkPureBarcode.Checked;
+
+                // 產生barcode
                 pictureBox1.Image = writter.Write(txtEncode.Text);
                 pictureBox1.Size = pictureBox1.Image.Size;
                 statusLabel1.Text = pictureBox1.Image.Size.ToString();
