@@ -40,13 +40,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboFormat = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkPureBarcode = new System.Windows.Forms.CheckBox();
-            this.txtWidth = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtHeight = new System.Windows.Forms.TextBox();
             this.txtMargin = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtHeight = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtWidth = new System.Windows.Forms.TextBox();
+            this.chkPureBarcode = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -170,50 +170,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "EncodingOptions";
             // 
-            // chkPureBarcode
-            // 
-            this.chkPureBarcode.AutoSize = true;
-            this.chkPureBarcode.Location = new System.Drawing.Point(91, 133);
-            this.chkPureBarcode.Name = "chkPureBarcode";
-            this.chkPureBarcode.Size = new System.Drawing.Size(125, 24);
-            this.chkPureBarcode.TabIndex = 0;
-            this.chkPureBarcode.Text = "PureBarcode";
-            this.chkPureBarcode.UseVisualStyleBackColor = true;
-            // 
-            // txtWidth
-            // 
-            this.txtWidth.Location = new System.Drawing.Point(91, 28);
-            this.txtWidth.Name = "txtWidth";
-            this.txtWidth.Size = new System.Drawing.Size(100, 29);
-            this.txtWidth.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "witch";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 66);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "height";
-            // 
-            // txtHeight
-            // 
-            this.txtHeight.Location = new System.Drawing.Point(91, 63);
-            this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(100, 29);
-            this.txtHeight.TabIndex = 14;
-            // 
             // txtMargin
             // 
             this.txtMargin.Location = new System.Drawing.Point(91, 98);
@@ -230,6 +186,51 @@
             this.label6.Size = new System.Drawing.Size(63, 20);
             this.label6.TabIndex = 15;
             this.label6.Text = "margin";
+            // 
+            // txtHeight
+            // 
+            this.txtHeight.Location = new System.Drawing.Point(91, 63);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(100, 29);
+            this.txtHeight.TabIndex = 14;
+            this.txtHeight.Text = "50";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 66);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "height";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 31);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "witch";
+            // 
+            // txtWidth
+            // 
+            this.txtWidth.Location = new System.Drawing.Point(91, 28);
+            this.txtWidth.Name = "txtWidth";
+            this.txtWidth.Size = new System.Drawing.Size(100, 29);
+            this.txtWidth.TabIndex = 12;
+            // 
+            // chkPureBarcode
+            // 
+            this.chkPureBarcode.AutoSize = true;
+            this.chkPureBarcode.Location = new System.Drawing.Point(91, 133);
+            this.chkPureBarcode.Name = "chkPureBarcode";
+            this.chkPureBarcode.Size = new System.Drawing.Size(125, 24);
+            this.chkPureBarcode.TabIndex = 0;
+            this.chkPureBarcode.Text = "PureBarcode";
+            this.chkPureBarcode.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
