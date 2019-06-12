@@ -1,4 +1,4 @@
-# GenBarcode Lab
+# Generate Barcode Lab
 To generate barcode/Code39/Code128 with ZXing.Net
 * Type: WinForm application
 * IDE: Visual Studio 2017
