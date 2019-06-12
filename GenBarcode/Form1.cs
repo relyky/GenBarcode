@@ -21,9 +21,9 @@ namespace GenBarcode
         private void Form1_Load(object sender, EventArgs e)
         {
             var formatList = new List<KeyValuePair<string, BarcodeFormat>>();
+            formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.CODE_128.ToString(), BarcodeFormat.CODE_128));
             formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.CODE_39.ToString(), BarcodeFormat.CODE_39));
             formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.CODE_93.ToString(), BarcodeFormat.CODE_93));
-            formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.CODE_128.ToString(), BarcodeFormat.CODE_128));
             formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.QR_CODE.ToString(), BarcodeFormat.QR_CODE));
 
             cboFormat.DisplayMember = "key";
@@ -58,7 +58,7 @@ namespace GenBarcode
                 // 產生barcode
                 pictureBox1.Image = writter.Write(txtEncode.Text);
                 pictureBox1.Size = pictureBox1.Image.Size;
-                statusLabel1.Text = pictureBox1.Image.Size.ToString();
+                statusLabel1.Text = "Barcode image size:" + pictureBox1.Image.Size.ToString();
             }
             catch (Exception ex)
             {

@@ -54,6 +54,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(14, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
@@ -126,7 +128,7 @@
             this.statusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 415);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(805, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(795, 22);
             this.statusStrip1.TabIndex = 8;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -156,6 +158,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.txtMargin);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtHeight);
@@ -165,7 +168,7 @@
             this.groupBox1.Controls.Add(this.chkPureBarcode);
             this.groupBox1.Location = new System.Drawing.Point(558, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(224, 234);
+            this.groupBox1.Size = new System.Drawing.Size(225, 234);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "EncodingOptions";
@@ -236,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 437);
+            this.ClientSize = new System.Drawing.Size(795, 437);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cboFormat);
             this.Controls.Add(this.label2);
