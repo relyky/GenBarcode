@@ -44,6 +44,7 @@ namespace GenBarcode
                 };
 
                 pictureBox1.Image = writter.Write(txtEncode.Text);
+                pictureBox1.Size = pictureBox1.Image.Size;
                 statusLabel1.Text = pictureBox1.Image.Size.ToString();
             }
             catch (Exception ex)
