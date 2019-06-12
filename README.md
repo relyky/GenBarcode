@@ -8,3 +8,4 @@ To generate barcode/Code39/Code128 with ZXing.Net
 ## reference
 * [C# Tutorial - Generate Barcode (the easy way) | FoxLearn](https://www.youtube.com/watch?v=hFwyOffnWLE)
 * [ZXing.Net](https://github.com/micjahn/ZXing.Net)
+* [Gist - gen_barcode.cs](https://gist.github.com/relyky/64c59a1a4f237cb9249aa1096d071e98)
