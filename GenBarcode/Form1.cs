@@ -18,29 +18,56 @@ namespace GenBarcode
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var formatList = new List<KeyValuePair<string, BarcodeFormat>>();
+            formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.CODE_39.ToString(), BarcodeFormat.CODE_39));
+            formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.CODE_93.ToString(), BarcodeFormat.CODE_93));
+            formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.CODE_128.ToString(), BarcodeFormat.CODE_128));
+            formatList.Add(new KeyValuePair<string, BarcodeFormat>(BarcodeFormat.QR_CODE.ToString(), BarcodeFormat.QR_CODE));
+
+            cboFormat.DisplayMember = "key";
+            cboFormat.ValueMember = "value";
+            cboFormat.DataSource = formatList;
+            cboFormat.SelectedIndex = 0;
+        }
+
         private void btnEncode_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtEncode.Text)) return;
-
-            BarcodeWriter writter = new BarcodeWriter()
+            try
             {
-                Format = BarcodeFormat.CODE_128,
-                Options = new ZXing.Common.EncodingOptions {
-                    PureBarcode = false,
-                }
-            };
+                if (String.IsNullOrWhiteSpace(txtEncode.Text)) return;
 
-            pictureBox1.Image = writter.Write(txtEncode.Text);
+                BarcodeWriter writter = new BarcodeWriter()
+                {
+                    Format = (BarcodeFormat)cboFormat.SelectedValue //  BarcodeFormat.CODE_128
+                };
+
+                pictureBox1.Image = writter.Write(txtEncode.Text);
+                statusLabel1.Text = pictureBox1.Image.Size.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().Name, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDecode_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Image == null) return;
+            try
+            {
+                if (pictureBox1.Image == null) return;
 
-            BarcodeReader reader = new BarcodeReader();
-            var result = reader.Decode((Bitmap)pictureBox1.Image);
-            if (result != null)
-                txtDecode.Text = result.Text;
+                BarcodeReader reader = new BarcodeReader();
+                var result = reader.Decode((Bitmap)pictureBox1.Image);
+                if (result != null)
+                    txtDecode.Text = result.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().Name, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }
